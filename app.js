@@ -16,15 +16,16 @@
 
 function splitCSV (str) {
     let people = str.split('\n');
+    // Foward 
+    for(let i = 0; i < people.length; i++) {
+        // console.log (people[i])
+    }
 
     // reverse
     for (let person = people.length - 1; person > -1; person--){
-        console.log (people[person])
+        // console.log (people[person])
     }
-// Foward
-    for(let i = 0; i < people.length; i++) {
-        console.log (people[i])
-    }
+
 }
 
 
@@ -96,31 +97,38 @@ Add the following object to the end of the array:
 
 function sortandManipulate (arr){
 // remove last element
-    let removeItem = arr.pop()
-    let new_obj = { id: "48", name: "Barry", occupation: "Runner", age: "25" }
-    arr[1] = new_obj
-    arr.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+    let removeItem = arr.pop() // deleting the last item in an array
+    let new_obj = { id: "48", name: "Barry", occupation: "Runner", age: "25" } // setting variable of an new object array
+    arr[1] = new_obj // adding object to my previous array as index 1 
+    arr.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" }) // adding new object at the end of array 
     return arr
-   
 }
+function findAvg(arr){
+    let sum = 0
+   for ( let i = 0; i > arr.length -1; i++){
+    obj = arr[i]
+    sum += parseInt(obj.age)
+        console.log(sum)     
+    }
+    let avg = sum / arr.length
+    return avg
 
-let removeElement = arr.pop()// .pop removes the last element
-console.log("Sort and pop",sortandManipulate(Transform(arr)))
+}
+// other ways i solved the problem without a function
+let removeElement = arr.pop() // .pop removes the last element
+// console.log("Sort and pop",sortandManipulate(Transform(arr)))
 
+ arr[1] = ['48' , 'Barry' , 'Runner' , '25']
+//  console.log(arr[1])
 
-// arr[1] = ['48' , 'Barry' , 'Runner' , '25']
-// console.log(arr[1])
+const barry = { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+// arr.splice( 1 , 0, barry)
+// console.log(arr)
 
-//const barry = { id: "48", name: "Barry", occupation: "Runner", age: "25" }
-// arr.splice(1,0 barry)
-//console.log(arr)
+ let addElement = arr.push(['7', 'Bilbo' , 'None', '111'])
+//  console.log (addElement)
 
-
-
-// let addElement = arr.push(['7', 'Bilbo' , 'None', '111'])
-// console.log (addElement)
-
-//addElement- arr.push ({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
-//console.log(arr)
+addElement- arr.push ({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+// console.log(arr)
 
 
